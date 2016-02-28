@@ -14,6 +14,8 @@ namespace AndroidCalculator
     {
         private bool IsCalculateOver=false;
         private string ExpressString ="";
+        private EditText txtInner = null;
+        private EditText txtSurface = null;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -39,7 +41,7 @@ namespace AndroidCalculator
             btnOne.Click += delegate { Click("1"); };
             Button btnTwo = FindViewById<Button>(Resource.Id.btnTwo);
             btnTwo.Click += delegate { Click("2"); };
-            Button btnThree = FindViewById<Button>(Resource.Id.btnThree); 
+            Button btnThree = FindViewById<Button>(Resource.Id.btnThree);
             btnThree.Click += delegate { Click("3"); };
             Button btnRightBracket = FindViewById<Button>(Resource.Id.btnRightBracket);
             btnRightBracket.Click += delegate { Click("("); };
@@ -63,10 +65,11 @@ namespace AndroidCalculator
             btnEqual.Click += delegate { Equal(); };
             Button btnClear = FindViewById<Button>(Resource.Id.btnClear);
             btnClear.Click += delegate { Clear(); };
+            txtInner = FindViewById<EditText>(Resource.Id.txtInner);
+            txtSurface = FindViewById<EditText>(Resource.Id.txtSurface);
         }
         private void Click(string Tag)
         {
-            EditText txtInner = FindViewById<EditText>(Resource.Id.txtInner);
             if (!ExpressString.Equals("") && IsCalculateOver)
             {
                 IsCalculateOver = false;
@@ -76,23 +79,20 @@ namespace AndroidCalculator
         }
         private void Back()
         {
-            EditText txtInner = FindViewById<EditText>(Resource.Id.txtInner);
             if(!txtInner.Text.Equals(""))
             {
-                txtInner.Text = txtInner.Text.Substring(0, txtInner.Text.Length-1);
+                txtInner.Text = txtInner.Text.PadRight(1);
             }
         }
         private void Equal()
         {
-            EditText txtInner=FindViewById<EditText>(Resource.Id.txtInner);
-            EditText txtSurface = FindViewById<EditText>(Resource.Id.txtSurface);
             if(!txtInner.Text.Equals(""))
             {
                 try
-                {
+                {                
                     StringCalculate Parse = new StringCalculate();
-                    string Result =Parse.runExpress(txtInner.Text);
-                    double Number=Convert.ToDouble(Result);
+                    var Result =Parse.runExpress(txtInner.Text);
+                    var Number = Convert.ToDecimal(Result);
                     txtSurface.Text = Number.ToString();
                     IsCalculateOver = !IsCalculateOver;
                     ExpressString = Result;
@@ -106,15 +106,13 @@ namespace AndroidCalculator
         }
         private void SameAsPrevious(string Sign)
         {
-            EditText txtInner = FindViewById<EditText>(Resource.Id.txtInner);
-            if(txtInner.Text.Length>1&&txtInner.Text.Substring(txtInner.Text.Length-2,1).Equals(Sign))
+            if(txtInner.Text.Length>1&&txtInner.Text.PadRight(1).Equals(Sign))
             {
-                txtInner.Text= txtInner.Text.Substring(0, txtInner.Text.Length - 1);
+                txtInner.Text= txtInner.Text.PadLeft(txtInner.Text.Length-1);
             }
         }
         private void Clear()
         {
-            EditText txtInner = FindViewById<EditText>(Resource.Id.txtInner);
             txtInner.Text = "";
         }
     }
