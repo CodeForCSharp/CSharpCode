@@ -13,7 +13,7 @@ namespace AndroidCalculator
     public class MainActivity : Activity
     {
         private bool IsCalculateOver=false;
-        private String ExpressString="";
+        private string ExpressString ="";
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -24,39 +24,39 @@ namespace AndroidCalculator
             // Get our button from the layout resource,
             // and attach an event to it
             Button btnSeven = FindViewById<Button>(Resource.Id.btnSeven);
-            btnSeven.Click += delegate { Click((String)btnSeven.Tag); };
+            btnSeven.Click += delegate { Click("7"); };
             Button btnEight = FindViewById<Button>(Resource.Id.btnEight);
-            btnEight.Click += delegate { Click((String)btnEight.Tag); };
+            btnEight.Click += delegate { Click("8"); };
             Button btnNine = FindViewById<Button>(Resource.Id.btnNine);
-            btnNine.Click += delegate { Click((String)btnNine.Tag); };
+            btnNine.Click += delegate { Click("9"); };
             Button btnFour = FindViewById<Button>(Resource.Id.btnFour);
-            btnFour.Click += delegate { Click((String)btnFour.Tag); };
+            btnFour.Click += delegate { Click("4"); };
             Button btnFive = FindViewById<Button>(Resource.Id.btnFive);
-            btnFive.Click += delegate { Click((String)btnFive.Tag); };
+            btnFive.Click += delegate { Click("5"); };
             Button btnSix = FindViewById<Button>(Resource.Id.btnSix);
-            btnSix.Click += delegate { Click((String)btnSix.Tag); };
+            btnSix.Click += delegate { Click("6"); };
             Button btnOne = FindViewById<Button>(Resource.Id.btnOne);
-            btnOne.Click += delegate { Click((String)btnOne.Tag); };
+            btnOne.Click += delegate { Click("1"); };
             Button btnTwo = FindViewById<Button>(Resource.Id.btnTwo);
-            btnTwo.Click += delegate { Click((String)btnTwo.Tag); };
+            btnTwo.Click += delegate { Click("2"); };
             Button btnThree = FindViewById<Button>(Resource.Id.btnThree); 
-            btnThree.Click += delegate { Click((String)btnThree.Tag); };
+            btnThree.Click += delegate { Click("3"); };
             Button btnRightBracket = FindViewById<Button>(Resource.Id.btnRightBracket);
-            btnRightBracket.Click += delegate { Click((String)btnRightBracket.Tag); };
+            btnRightBracket.Click += delegate { Click("("); };
             Button btnLeftBracket = FindViewById<Button>(Resource.Id.btnLeftBracket);
-            btnLeftBracket.Click += delegate { Click((String)btnLeftBracket.Tag); };
+            btnLeftBracket.Click += delegate { Click(")"); };
             Button btnZero = FindViewById<Button>(Resource.Id.btnZero);
-            btnZero.Click += delegate { Click((String)btnZero.Tag); };
+            btnZero.Click += delegate { Click("0"); };
             Button btnAdd = FindViewById<Button>(Resource.Id.btnAdd);
-            btnAdd.Click += delegate { Click((String)btnAdd.Tag); SameAsPrevious((String)btnAdd.Tag); };
+            btnAdd.Click += delegate { Click("+"); SameAsPrevious("+"); };
             Button btnCut = FindViewById<Button>(Resource.Id.btnCut);
-            btnCut.Click += delegate { Click((String)btnCut.Tag); SameAsPrevious((String)btnCut.Tag); };
+            btnCut.Click += delegate { Click("-"); SameAsPrevious("-"); };
             Button btnMuilt = FindViewById<Button>(Resource.Id.btnMuilt);
-            btnMuilt.Click += delegate { Click((String)btnMuilt.Tag); SameAsPrevious((String)btnMuilt.Tag); };
+            btnMuilt.Click += delegate { Click("*"); SameAsPrevious("*"); };
             Button btnDiv = FindViewById<Button>(Resource.Id.btnDiv);
-            btnDiv.Click += delegate { Click((String)btnDiv.Tag); SameAsPrevious((String)btnDiv.Tag); };
+            btnDiv.Click += delegate { Click("/"); SameAsPrevious("/"); };
             Button btnDot = FindViewById<Button>(Resource.Id.btnDot);
-            btnDot.Click += delegate { Click((String)btnDot.Tag); SameAsPrevious((String)btnDot.Tag); };
+            btnDot.Click += delegate { Click("."); SameAsPrevious("."); };
             Button btnBack = FindViewById<Button>(Resource.Id.btnBack);
             btnBack.Click += delegate { Back(); };
             Button btnEqual = FindViewById<Button>(Resource.Id.btnEqual);
@@ -91,7 +91,7 @@ namespace AndroidCalculator
                 try
                 {
                     StringCalculate Parse = new StringCalculate();
-                    String Result=Parse.runExpress(txtInner.Text);
+                    string Result =Parse.runExpress(txtInner.Text);
                     double Number=Convert.ToDouble(Result);
                     txtSurface.Text = Number.ToString();
                     IsCalculateOver = !IsCalculateOver;
@@ -104,7 +104,7 @@ namespace AndroidCalculator
                 }
             }
         }
-        private void SameAsPrevious(String Sign)
+        private void SameAsPrevious(string Sign)
         {
             EditText txtInner = FindViewById<EditText>(Resource.Id.txtInner);
             if(txtInner.Text.Length>1&&txtInner.Text.Substring(txtInner.Text.Length-2,1).Equals(Sign))
