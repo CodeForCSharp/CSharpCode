@@ -13,7 +13,7 @@
         android:id="@+id/tableLayout1"
         android:stretchColumns="0,1,2,3,4">
         <EditText
-            android:id="@+id/txtInner"
+            android:id="@+id/TxtInner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -23,7 +23,7 @@
             android:background="#ffffff"
             android:textColor="#ff000000" />
         <EditText
-            android:id="@+id/txtSurface"
+            android:id="@+id/TxtSurface"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -38,51 +38,46 @@
             <Button
                 android:text="7"
                 android:layout_column="0"
-                android:id="@+id/btnSeven"
+                android:id="@+id/BtnSeven"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="7"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
-                android:text="8"
                 android:layout_column="1"
-                android:id="@+id/btnEight"
+                android:id="@+id/BtnEight"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="8"
                 android:background="#252525"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:text="8" />
             <Button
-                android:text="9"
                 android:layout_column="2"
-                android:id="@+id/btnNine"
+                android:id="@+id/BtnNine"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="9"
                 android:background="#252525"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:text="9" />
             <Button
                 android:text="+"
                 android:layout_column="3"
-                android:id="@+id/btnAdd"
+                android:id="@+id/BtnAdd"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="+"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="-"
                 android:layout_column="4"
-                android:id="@+id/btnCut"
+                android:id="@+id/BtnCut"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="-"
                 android:background="#252525"
                 android:textColor="#ffffff" />
         </TableRow>
@@ -92,51 +87,46 @@
             <Button
                 android:text="4"
                 android:layout_column="0"
-                android:id="@+id/btnFour"
+                android:id="@+id/BtnFour"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="4"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="5"
                 android:layout_column="1"
-                android:id="@+id/btnFive"
+                android:id="@+id/BtnFive"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="5"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="6"
                 android:layout_column="2"
-                android:id="@+id/btnSix"
+                android:id="@+id/BtnSix"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="6"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="*"
                 android:layout_column="3"
-                android:id="@+id/btnMuilt"
+                android:id="@+id/BtnMuilt"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="*"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="/"
                 android:layout_column="4"
-                android:id="@+id/btnDiv"
+                android:id="@+id/BtnDiv"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="/"
                 android:background="#252525"
                 android:textColor="#ffffff" />
         </TableRow>
@@ -146,37 +136,34 @@
             <Button
                 android:text="1"
                 android:layout_column="0"
-                android:id="@+id/btnOne"
+                android:id="@+id/BtnOne"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="1"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="2"
                 android:layout_column="1"
-                android:id="@+id/btnTwo"
+                android:id="@+id/BtnTwo"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="2"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="3"
                 android:layout_column="2"
-                android:id="@+id/btnThree"
+                android:id="@+id/BtnThree"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="3"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="C"
                 android:layout_column="3"
-                android:id="@+id/btnClear"
+                android:id="@+id/BtnClear"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
@@ -184,7 +171,7 @@
                 android:textColor="#ffffff" />
             <Button
                 android:layout_column="4"
-                android:id="@+id/btnBack"
+                android:id="@+id/BtnBack"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:text="B"
@@ -197,38 +184,35 @@
             android:layout_weight="1">
             <Button
                 android:layout_column="0"
-                android:id="@+id/btnLeftBracket"
+                android:id="@+id/BtnLeftBracket"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:text="("
                 android:textSize="35sp"
-                android:tag="("
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="0"
                 android:layout_column="1"
-                android:id="@+id/btnZero"
+                android:id="@+id/BtnZero"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag="0"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text=")"
                 android:layout_column="2"
-                android:id="@+id/btnRightBracket"
+                android:id="@+id/BtnRightBracket"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
-                android:tag=")"
                 android:background="#252525"
                 android:textColor="#ffffff" />
             <Button
                 android:text="."
                 android:layout_column="3"
-                android:id="@+id/btnDot"
+                android:id="@+id/BtnDot"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
@@ -238,7 +222,7 @@
             <Button
                 android:text="="
                 android:layout_column="4"
-                android:id="@+id/btnEqual"
+                android:id="@+id/BtnEqual"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textSize="35sp"
